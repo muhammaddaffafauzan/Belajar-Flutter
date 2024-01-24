@@ -16,13 +16,20 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 57, 60, 223),
-          title: Text("PERSIB",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          leading: Container(
+            padding: EdgeInsets.all(8),
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(
+                  "https://i0.wp.com/api.jatimnet.com/jinet/assets/media/news/news/image_front/persib.png.780x439_q85.png"),
+            ),
+          ),
+          title: Text(
+            "PERSIB",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
-        body: LatihanListBuilder()
+        body: LatihanListBuilder(),
       ),
     );
   }
-  
 }

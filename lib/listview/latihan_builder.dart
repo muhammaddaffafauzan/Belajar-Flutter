@@ -13,7 +13,7 @@ class ListItem {
 class LatihanListBuilder extends StatelessWidget {
   LatihanListBuilder({super.key});
 
-  final List<ListItem> itemList = [
+final List<ListItem> itemList = [
     ListItem(
         "https://i0.wp.com/api.jatimnet.com/jinet/assets/media/news/news/image_front/persib.png.780x439_q85.png",
         "PERSIB adalah klub sepak bola Indonesia yang berbasis di Kota Bandung",
@@ -43,8 +43,8 @@ class LatihanListBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 600,
-      height: 585,
+      width: double.infinity,
+      height: double.infinity,
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 22, 23, 90),
       ),
@@ -54,7 +54,7 @@ class LatihanListBuilder extends StatelessWidget {
           Column(
             children: [
               Container(
-                width: 400,
+                width: double.infinity,
                 height: 200,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -69,7 +69,7 @@ class LatihanListBuilder extends StatelessWidget {
           Column(
             children: [
               Container(
-                width: 400,
+                width: double.infinity,
                 height: 150,
                 margin: EdgeInsets.all(10),
                 padding: EdgeInsets.all(10),
@@ -86,108 +86,104 @@ class LatihanListBuilder extends StatelessWidget {
                   },
                   itemBuilder: (context, index) {
                     return Container(
-                        margin: EdgeInsets.all(10),
-                        height: 110,
-                        width: 200,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Container(
-                              width: 90,
-                              height: 90,
-                              margin: EdgeInsets.all(10),
-                              padding: EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: NetworkImage(itemList[index].imageUrl),
-                                ),
+                      margin: EdgeInsets.all(10),
+                      height: 110,
+                      width: double.infinity, // Set width to take full width
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                            width: 90,
+                            height: 90,
+                            margin: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: NetworkImage(itemList[index].imageUrl),
                               ),
                             ),
-                            Row(
-                              children: [
-                                Container(
-                                  width: 100, // Adjust the width as needed
-                                  child: Text(
-                                    itemList[index].aritikel,
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ),
-                              ],
+                          ),
+                          Expanded( // Use Expanded to take remaining space
+                            child: Container(
+                              child: Text(
+                                itemList[index].aritikel,
+                                textAlign: TextAlign.left,
+                              ),
                             ),
-                          ],
-                        ));
+                          ),
+                        ],
+                      ),
+                    );
                   },
                 ),
               ),
             ],
           ),
           Center(
-              child: Text(
-            "Gallery",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          )),
+            child: Text(
+              "Gallery",
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
           Column(
             children: [
               Container(
                 width: double.infinity,
                 height: 150,
                 child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: itemList.length,
-                    itemBuilder: (context, index) {
-                      return Column(
-                        children: [
-                          Container(
-                            width: 90,
-                            height: 90,
-                            margin: EdgeInsets.all(10),
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                image: NetworkImage(itemList[index].gallery),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        ],
-                      );
-                    }),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: itemList.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 90,
+                      height: 90,
+                      margin: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: NetworkImage(itemList[index].gallery),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    );
+                  },
+                ),
               ),
             ],
           ),
           Center(
-              child: Text(
-            "Pemain Persib",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          )),
+            child: Text(
+              "Pemain Persib",
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
           Column(
             children: [
               Container(
                 width: double.infinity,
                 height: 150,
                 child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: itemList.length,
-                    itemBuilder: (context, index) {
-                      return Column(
-                        children: [
-                          Container(
-                            width: 90,
-                            height: 90,
-                            margin: EdgeInsets.all(10),
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                image: NetworkImage(itemList[index].pemain),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        ],
-                      );
-                    }),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: itemList.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 90,
+                      height: 90,
+                      margin: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: NetworkImage(itemList[index].pemain),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    );
+                  },
+                ),
               ),
             ],
           )
