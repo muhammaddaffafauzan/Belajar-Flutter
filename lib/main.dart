@@ -1,13 +1,4 @@
-import 'package:belajar/column_widget.dart';
-import 'package:belajar/container_widget.dart';
-import 'package:belajar/latihan1_widget.dart';
-import 'package:belajar/latihan2_widget.dart';
-import 'package:belajar/latihan3_widget.dart';
 import 'package:belajar/listview/latihan_builder.dart';
-import 'package:belajar/listview/list_basic.dart';
-import 'package:belajar/listview/list_build_separated.dart';
-import 'package:belajar/row_column_widget.dart';
-import 'package:belajar/row_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
