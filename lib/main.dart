@@ -1,4 +1,13 @@
+import 'package:belajar/column_widget.dart';
 import 'package:belajar/container_widget.dart';
+import 'package:belajar/latihan1_widget.dart';
+import 'package:belajar/latihan2_widget.dart';
+import 'package:belajar/latihan3_widget.dart';
+import 'package:belajar/listview/latihan_builder.dart';
+import 'package:belajar/listview/list_basic.dart';
+import 'package:belajar/listview/list_build_separated.dart';
+import 'package:belajar/row_column_widget.dart';
+import 'package:belajar/row_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,38 +21,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "belajar flutter pertama",
+      title: "Persib",
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
-          centerTitle: true,
-          title: Text("Belajar Flutter",
-          style: TextStyle(color: Colors.white),
+          backgroundColor: Color.fromARGB(255, 57, 60, 223),
+          title: Text("PERSIB",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
-        body: BelajarContainer(),
+        body: LatihanListBuilder()
       ),
     );
   }
   
 }
-
-class textwidget extends StatelessWidget {
-  const textwidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "hello world...\nHallo Dunia...",
-        style: TextStyle(
-          color: Colors.pink, fontSize: 24, fontWeight: FontWeight.bold
-        ),
-        )
-      );
-  }
-}
-
-
