@@ -47,21 +47,21 @@ class GridLatihan extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(20),
                 width: 200,
-                height: 200, // Membuat persegi
+                height: 200, 
                 color: Colors.red,
                 child: FlutterLogo(),
               ),
               Container(
                 margin: EdgeInsets.all(20),
                 width: 200,
-                height: 200, // Membuat persegi
+                height: 200, 
                 color: Colors.red,
                 child: FlutterLogo(),
               ),
               Container(
                 margin: EdgeInsets.all(20),
                 width: 200,
-                height: 200, // Membuat persegi
+                height: 200, 
                 color: Colors.red,
                 child: FlutterLogo(),
               ),
