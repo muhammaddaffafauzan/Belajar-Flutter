@@ -1,8 +1,7 @@
-import 'package:belajar/gridview/grid_basic.dart';
-import 'package:belajar/gridview/grid_builder.dart';
-import 'package:belajar/gridview/grid_count.dart';
-import 'package:belajar/gridview/latihan_grid.dart';
-import 'package:belajar/listview/latihan_builder.dart';
+import 'package:belajar/screens/form_screen.dart';
+import 'package:belajar/screens/list_nature.dart';
+import 'package:belajar/screens/menu_screen.dart';
+import 'package:belajar/screens/second_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,24 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Persib",
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 57, 60, 223),
-          leading: Container(
-            padding: EdgeInsets.all(8),
-            child: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  "https://i0.wp.com/api.jatimnet.com/jinet/assets/media/news/news/image_front/persib.png.780x439_q85.png"),
-            ),
-          ),
-          title: Text(
-            "PERSIB",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
-        body: GridLatihan(),
-      ),
+      title: "Flutter",
+      initialRoute: '/',
+      routes: {
+        '/': (context) => NavigationMenu(),
+        'nature': (context) => ListNatureScreen(),
+        'form': (context) => BelajarForm()
+      },
     );
   }
 }
