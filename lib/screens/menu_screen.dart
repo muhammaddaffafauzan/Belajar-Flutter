@@ -1,9 +1,7 @@
-import 'package:belajar/screens/form_screen.dart';
+import 'package:belajar/screens/booking_ticket.dart';
 import 'package:belajar/screens/home_screen.dart';
 import 'package:belajar/screens/list_nature.dart';
-import 'package:belajar/screens/second_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 class NavigationMenu extends StatefulWidget {
   NavigationMenu({super.key});
@@ -15,7 +13,7 @@ class NavigationMenu extends StatefulWidget {
 class _NavigationMenuState extends State<NavigationMenu> {
   int _selectedTab = 0;
 
-  List _pages = [HomeScreen(), ListNatureScreen(), BelajarForm()];
+  List _pages = [HomeScreen(), ListNatureScreen(), BookingTiket()];
 
   _changeTab(int index) {
     setState(() {
@@ -33,8 +31,9 @@ class _NavigationMenuState extends State<NavigationMenu> {
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.view_stream), label: "Nature"),
-          BottomNavigationBarItem(icon: Icon(Icons.folder), label: "form")
+          BottomNavigationBarItem(
+              icon: Icon(Icons.view_stream), label: "Nature"),
+          BottomNavigationBarItem(icon: Icon(Icons.folder), label: "booking")
         ],
       ),
     );

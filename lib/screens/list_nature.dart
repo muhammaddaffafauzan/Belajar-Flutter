@@ -5,34 +5,39 @@ import 'package:belajar/screens/detail_nature.dart';
 class ListNatureScreen extends StatelessWidget {
   final List<Map<String, dynamic>> natureData = [
     {
-      "nama": "Danau sarkanjut",
+      "nama": "Danau PDAM",
       "negara": "bojong soang",
       "image": "images/nature1.jpeg",
       "desc": "ini bojong soang",
+      "harga": 10000
     },
     {
       "nama": "pegunungan everest",
       "negara": "nepal",
       "image": "images/nature2.jpeg",
       "desc": "tempat yang indah.",
+      "harga": 200000
     },
     {
       "nama": "green land",
       "negara": "swiss",
       "image": "images/nature3.jpeg",
       "desc": "ini tempat yang sangat indah dan tenang",
+      "harga": 3500000
     },
     {
       "nama": "danau sipatengang",
       "negara": "indonesia",
       "image": "images/nature4.jpeg",
       "desc": "ini danau yang di tengah nya ada pulau kecil",
+      "harga": 15000
     },
     {
       "nama": "sungai citarum",
       "negara": "indonesia",
       "image": "images/nature5.jpeg",
       "desc": "ini sungai tebersih dan terpanjang di dunia",
+      "harga": 15000
     },
   ];
 

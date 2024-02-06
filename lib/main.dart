@@ -1,7 +1,6 @@
-import 'package:belajar/screens/form_screen.dart';
+import 'package:belajar/screens/booking_ticket.dart';
 import 'package:belajar/screens/list_nature.dart';
 import 'package:belajar/screens/menu_screen.dart';
-import 'package:belajar/screens/second_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => NavigationMenu(),
         'nature': (context) => ListNatureScreen(),
-        'form': (context) => BelajarForm()
+        'booking': (context) => BookingTiket()
       },
     );
   }
