@@ -196,17 +196,34 @@ class _BookingTiketState extends State<BookingTiket> {
     );
   }
 
-  void _submit() {
+  void _submit() async {
     final isValid = _formKey.currentState!.validate();
     if (!isValid) {
       return;
     } else {
       _formKey.currentState!.save();
+
+      // Tambahkan indikator loading
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircularProgressIndicator(),
+                SizedBox(height: 8),
+                Text("Menyimpan..."),
+              ],
+            ),
+          );
+        },
+      );
+
       String nama = namaController.text;
       String tujuan = _pilihtujuan;
       String tanggalJadwal = tanggalJadwalController.text;
 
-      // Update _submit untuk menghitung harga tiket
       Map<String, dynamic> selectedTujuan = ListNatureScreen()
           .natureData
           .firstWhere((element) => element['nama'] == tujuan);
@@ -214,6 +231,13 @@ class _BookingTiketState extends State<BookingTiket> {
       _hargaTiket = selectedTujuan['harga'];
       _totalHarga = _hargaTiket * _jumlahTiket;
 
+      // Tunda pemanggilan Navigator.push selama 2 detik
+      await Future.delayed(Duration(seconds: 2));
+
+      // Tutup indikator loading
+      Navigator.pop(context);
+
+      // Pindah ke layar output
       Navigator.push(
         context,
         MaterialPageRoute(

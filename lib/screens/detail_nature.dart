@@ -28,7 +28,7 @@ class DetailNatureScreen extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/background.jpeg"),
+              image: AssetImage("images/background.jpg"),
               fit: BoxFit.cover,
               ),
           ),
@@ -42,7 +42,7 @@ class DetailNatureScreen extends StatelessWidget {
                 child: Text(
                   "$nama - $negara",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: const Color.fromARGB(255, 36, 36, 36),
                     fontSize: 24,
                     fontWeight: FontWeight.bold
                   ),

@@ -44,24 +44,24 @@ class ListNatureScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('List Nature'),
-        backgroundColor: Colors.green,
-          leading: GestureDetector(
-            child: Icon(Icons.arrow_back_ios, color: Colors.black),
-            onTap: () {
-             Navigator.popUntil(context, ModalRoute.withName('/'));
-            },
-          ), // Hapus latar belakang appbar
-        elevation: 0, // Hilangkan bayangan appbar
-      ),
+      // appBar: AppBar(
+      //   title: Text('List Nature'),
+      //   backgroundColor: Colors.green,
+      //     leading: GestureDetector(
+      //       child: Icon(Icons.arrow_back_ios, color: Colors.black),
+      //       onTap: () {
+      //        Navigator.popUntil(context, ModalRoute.withName('/'));
+      //       },
+      //     ), // Hapus latar belakang appbar
+      //   elevation: 0, // Hilangkan bayangan appbar
+      // ),
       body: SafeArea(
         child: Container(
           height: double.infinity,
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("images/background.jpeg"),
+              image: AssetImage("images/background.jpg"),
               fit: BoxFit.cover,
             ),
           ),
@@ -106,7 +106,7 @@ class ListNatureScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.orangeAccent,
+                        color: Colors.white,
                       ),
                     ),
                   ),

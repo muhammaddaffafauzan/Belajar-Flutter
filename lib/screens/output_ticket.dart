@@ -21,9 +21,9 @@ class OutputFormTicketScreen extends StatelessWidget {
     Intl.defaultLocale = 'id_ID';
     return Scaffold(
       appBar: AppBar(
-        title: Text('Output Form'),
+        title: Text('Invoice Ticket'),
         centerTitle: true,
-        backgroundColor: Colors.red, // Menengahkan judul appbar
+        backgroundColor: Colors.greenAccent,
       ),
       body: Container(
         width: double.infinity,
